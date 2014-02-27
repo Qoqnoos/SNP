@@ -1,0 +1,40 @@
+{style}
+{literal}
+.ow_add_comments_form .ow_submit_auto_click .item_loaded{
+    margin-bottom:4px;
+}
+.comments_fake_autoclick {
+    height:20px;
+}
+{/literal}
+{/style}
+<div id="{$cmpContext}">
+    {capture name='comments'}
+    {if $displayType == 1 || $displayType == 3 || $displayType == 4}
+   <div class="comments_list_cont">
+	   {$commentList}
+   </div>
+   {/if}
+   	{if isset($formCmp)}
+        <div class="clearfix base_cmnt_mark ow_smallmargin">
+          <div class="ow_comments_item_picture">{decorator name='avatar_item' data=$currentUserInfo}</div>
+          <div class="ow_comments_item_info clearfix"><span class="comment_add_arr"></span><textarea class="comments_fake_autoclick invitation">{text key='base+comment_form_element_invitation_text'}</textarea></div>
+      </div>
+      <div class="base_cmnts_temp_cont ow_smallmargin" style="display:none"></div>
+    {else}
+      <div class="ow_smallmargin ow_center ow_comments_msg">{$authErrorMessage}</div>
+   {/if}
+   {if $displayType == 2}
+   <div class="comments_list_cont">
+	   {$commentList}
+   </div>
+   {/if}
+   {/capture}
+   {if $wrapInBox}
+   {block_decorator name='box' type='empty' addClass='ow_add_comments_form ow_stdmargin' langLabel='base+comment_box_cap_label' iconClass='ow_ic_comment'}
+   {$smarty.capture.comments}
+   {/block_decorator}
+   {else}
+   {$smarty.capture.comments}
+   {/if}
+</div>

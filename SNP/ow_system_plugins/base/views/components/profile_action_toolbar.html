@@ -1,0 +1,10 @@
+<ul class="ow_bl ow_profile_action_toolbar clearfix ow_small ow_stdmargin">
+    {foreach from=$toolbar item='action'}
+        <li>
+            <a {$action.attrs} >
+                {$action.label}
+            </a>
+        </li>
+    {/foreach}
+</ul>
+{$cmpsMarkup}

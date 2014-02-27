@@ -1,0 +1,34 @@
+{script}
+    {literal}
+      $(function(){
+            $("form[name='qst_add_form'] select[name='qst_answer_type']").change(
+               function(){ this.form.submit(); }
+            );
+       });
+   {/literal}
+{/script}
+
+{$contentMenu}
+{form name='qst_add_form'}
+	<table class="ow_table_1 ow_form ow_admin_add_profile_question">
+		{foreach from=$formData key='formEl' item='field' name='f'}
+                    <tr class="{cycle values='ow_alt2,ow_alt1'} tr_{$formEl} {if $smarty.foreach.f.first}ow_tr_first{/if} {if $smarty.foreach.f.last}ow_tr_last{/if}">
+                        <td class="ow_label">
+                            {label name=$formEl}
+                        </td>
+                        <td class="ow_value">
+                            {input name=$formEl}
+                            <br/>
+                            {error name=$formEl}
+                        </td>
+                        <td class="ow_desc ow_small">{desc name=$formEl}</td>
+                    </tr>
+		{/foreach}
+
+	</table>
+    <div class="clearfix ow_stdmargin">
+        <div class="ow_right">
+             {submit name='qst_submit'} {text key='admin+or'} {submit name='qst_submit_and_add'}
+        </div>
+    </div>
+{/form}

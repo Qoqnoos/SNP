@@ -1,0 +1,23 @@
+{style}
+{literal}
+.ow_attachment_btn {
+	float: right;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 4px; 
+}
+{/literal}
+{/style}
+{form name="comment-add-`$id`"}
+<div class="clearfix">
+    <div class="ow_comments_item_picture">{decorator name='avatar_item' data=$currentUserInfo}</div>
+    <div class="ow_comments_item_info clearfix"><span class="comment_add_arr"></span>{input name='commentText' class='ow_smallmargin ow_comment_textarea'}</div>
+</div>
+<div>
+    {if !empty($attachment)}<div id="attachment_preview_{$id}"></div>{/if}
+    <div class="clearfix ow_comments_btn_block">
+    <span class="ow_attachment_btn">{submit name='comment-submit'}</span>
+    {if !empty($attachment)}<span class="ow_attachment_icons">{$attachment}</span>{/if}
+    <span class="ow_side_preloader_wrap"><span class="ow_side_preloader ow_inprogress comments-preloader" style="display: none;"></span></span>
+    </div>
+</div>
+{/form}

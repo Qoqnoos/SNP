@@ -1,0 +1,159 @@
+{style}
+{literal}
+.ow_photo_holder{
+    border-bottom-width: 1px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #292929;
+}
+.ow_photo_stage{
+    text-align: center;
+    position: relative;
+    height: 400px;
+}
+.ow_photo_img{
+    display: block;
+    position: absolute;
+}
+.ow_photo_preload{
+    display: none;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+.ow_photo_preload .ow_floatbox_preloader{
+    margin: 33px auto 0 auto;
+}
+.ow_photo_nav_l{
+    position: absolute;
+    display: none;
+    top: 0px;
+    left: 20px;
+    width: 15%;
+    height: 100%;
+    text-align: left;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAYdJREFUeNrsmdFKwzAUhrcaWkQURLwQ0bfxAVrKKOIT+GS99w3UTZkPIeL1GGwMcejqHziRkgtLbdqTwAn8NGvp6f81OZwmG1dVNQq5RaPAmwAIgAAIgAAIQNBN/ffGoijavCT9nD36/Q19QbuyLPkAWphPoCNoX5uG1tAG2vo+hYz5E+gSb/sVekP/sDYa3gLUzV/A+LyvZ0YDmJ+ZC1mWTXD4oDzwEuAv89dxHD+hu6Ik9g6gyfwDugvok5LZKwAW864A2My7AGA13xWA3XxXAEUV9twyfzOU+a4AupoewPyzOZGm6S3Mv6C7HMK88zqQJMl7SJ/TuppuMGV+P0sxGnc4nELHlB+RzwC6mq4wZaY6aWsQjzqpKbl7h+gSfEfzfKGT1oKYDQXRNTA7hIugrBCuArJBuAzGAuF6SJsgzqh6K18BmiDmtLj3fk1sQ0ysa/z7Qi0h7vM8v9LnlFJrl2vivveFDMQSxqfWxlYQAAZi21fwsfxLKQACIAACIAACwNh+BBgASrS6BiLKro0AAAAASUVORK5CYII=") no-repeat 0px center;
+}
+.ow_photo_nav_l:hover{
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAASVJREFUeNrs2D0KwkAQBeC4BIzY2HkBG629h9tIbuAV7G29SNAqF7EUC/u0ISBi5xtIEdI6M+vADLyw5ftCfjaZlGWZYRbIHln163+eFnkiV1rnOCyRIzLPbAyd4C2yRs4Bh2io/HCo8y70EquzIcDMMGAaMuPjAAc4wAEOsAGoqupAMQmQKK4GGJaPMV5MAcbli6JozQA0yosBtMqLADTLswO0y7MCUpRnA6QqzwJIWZ79HtAuzwIYvl0ltwxiADrrKRGB69JJhQic138KBPtNrI1g30poI0Q2c5oIse20FkL0g0YDIf5JOUZwT67xqBsisLYHkNwn+Y8tBzjAAQ74GfA23P9DgIdhwJ0ANfIyWJ461wRokBNyQzoDxbu+K3VuvgIMANp3e8ZBdRtiAAAAAElFTkSuQmCC") no-repeat 0px center;
+}
+.ow_photo_nav_r{
+    position: absolute;
+    display: none;
+    top: 0px;
+    right: 20px;
+    height: 100%;
+    width: 75%;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAYxJREFUeNrsmVFKw0AQhtNtSBCpIOKDSL2MJ0gIEoon8GR59wi1reijBxDxWYRKKUpt/AcmEPKkdmfShVn4SWlh+L/d2e7MZlDXdRTycFHgwwAMwAAMwAAMIOgR+wpUlqXjeEP+6hvaQNvfxqiqqj8AjnUIjXhl19AS+vwLRJ8pRDM/wiy+QM/4fAGdQKlkqjqpeIB4wGMsDeEzKOX8Os/zqxbEXBrCZ0DasMskSRaAmGhB+Ay25Q37BoipFoTvJVWHkNhYqhBSf29qEJKlhAqEdC3UhbjuQJxDR7tUBBrFXAPxDojHLMtuWhD3XH4Mg6lG0zR9Da2cdpznx9ApZv22+QEpVeKx4lN8LwEa87RZxzB/1zI/QUrNuGLd7CNA1/y8Y35Km3vXctuFbF4KQM28VD+gZt43gLp53wAxn6pnWuYleuIDbiVVzPu+lYjaBqm1pO5M0rxvADpNP4qiuKSVhfknjWsVnwB0mq7iOF7892KrbwAy+qVdHA7sLaUBGIABGIABGECP40eAAQAxt7kh6VQqKQAAAABJRU5ErkJggg==") no-repeat right center;
+}
+.ow_photo_nav_r:hover{
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAASFJREFUeNrs1zEKwkAQBdC4BIzY2HkBG629h9tIbuAV7G29SNAqF7EUC/u0IRDEzhlIEazzvxmZgR9S/peNZneS53kis5DsJavufsxTS56Sq96ncllKjpJ5YmP0AW8la8k5yCUaKt8f7bwLncTqbBQwMwyYhsT4OMABDnCAA8YFKIrioDG/AizE4IAY44WJGByQZVnNREBeISYC9htgIaB/owwE/DuARlA+ZEgE7UuMQlC3EggEfS+kCNObuf5T76+GCcB3+SFWI1guTwOgylMAyPJwALo87UCDKg8DsMrDzsSs8tBXiFFeJ0WdiRnlIQBW8Z/thRzgAAc44P8AL8P93wp4GAbcFVBKWoPltXOpgEpyktwkjYHiTddVO1cfAQYARnR7rvJZ1vYAAAAASUVORK5CYII=") no-repeat right center;
+}
+.ow_photo_info{
+    padding: 8px;
+}
+.ow_photo_hover_info{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0RkM1MzI2NTZBQTQxMUUxQUZFQjlFQTIzNDdGQkJCNSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0RkM1MzI2NjZBQTQxMUUxQUZFQjlFQTIzNDdGQkJCNSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjRGQzUzMjYzNkFBNDExRTFBRkVCOUVBMjM0N0ZCQkI1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjRGQzUzMjY0NkFBNDExRTFBRkVCOUVBMjM0N0ZCQkI1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+7O636QAAACdJREFUeNpiZGBg8GKgAWBioBEYNXjU4FGDRw0eNXjU4JFiMECAAQDk3AB2NinTlAAAAABJRU5ErkJggg==") repeat 0 0;
+    display: none;
+}
+.ow_photo_hover_info_item{
+    padding: 5px 8px;
+    display: inline-block;
+    color: #fff;
+}
+.ow_photo_hover_info a{
+    color: #fff;
+    font-weight: bold;
+}
+.ow_photo_hover_zoom {
+    display: inline-block;
+    width: 32px;
+    height: 28px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNBMzRGNkU1MzJEMjExRTJBMjQwRTg1REFDREJDQ0Y5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjNBMzRGNkU2MzJEMjExRTJBMjQwRTg1REFDREJDQ0Y5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6M0EzNEY2RTMzMkQyMTFFMkEyNDBFODVEQUNEQkNDRjkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6M0EzNEY2RTQzMkQyMTFFMkEyNDBFODVEQUNEQkNDRjkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7Z5IjzAAABQklEQVR42mL8//8/AxAIA3EyEGtB2aSAt0B8DYjngtiMQAOlgYzuDRs2/N+zZ8/3N2/e/CXFNBEREWYXFxfOgIAARiC3HGRgxYoVK3SABn5loAD4+flxR0VFXQMZuCIlJeXzly9f/gENTsOmOCIiYhYhAzk5ORnnz58vyARkc4MMw6UQ6JVVxLjw+/fvoMjgYMKnCGQYBwfHB1K8jtdAYLiGkRqWTIS8iStciTYQ5k1iww4dsOAKM2RDgWzyDESPAFIjhGCkoANQeKKHKTqfiZxwghmCLcJIMpCY2CfJQGJin2QvE0rsIAO/8vDwMJESdrgKByD1A5RsLjk5OWlt2rTpKylhiBYUDK6urlxA5nlQ8SULZHSCCthdu3Z9f/fuHUkFrJCQELObmxtKAQurAlKhVYAgicH6HloFzAZVAQABBgByq4kTrNDQGAAAAABJRU5ErkJggg==") no-repeat center center;
+}
+.ow_photo_info_name{
+    margin-left: 45px;
+    padding-left: 10px;
+}
+.ow_photo_info .ow_avatar{
+    float:left;
+    margin-right: -45px;
+}
+.ow_photo_context_action {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+}
+.ow_photo_comments .ow_box_cap_empty,
+.ow_photo_comments .comments_list_cont .ow_nocontent {
+    display: none;
+}
+{/literal}
+{/style}
+
+<div id="ow-photo-view">
+    {if !$canView}
+    <div style="padding: 45px 25px 65px"><div class="ow_anno ow_nocontent">{text key="base+authorization_failed_feedback"}</div></div>
+    {else}
+    <div class="ow_photo_holder ow_border">
+        <div class="ow_photo_stage"><img src="{$url}" class="ow_photo_img" /></div>
+
+        <div class="ow_photo_context_action">{$contextAction}</div>
+
+        {if $previousPhoto}<a class="ow_photo_nav_l" href="javascript://" rel="{$previousPhoto.dto->id}"></a>{/if}
+        {if $nextPhoto}<a class="ow_photo_nav_r" href="javascript://" rel="{$nextPhoto.dto->id}"></a>{/if}
+
+        <div class="ow_photo_hover_info">
+            <div class="ow_photo_hover_info_l ow_left ow_hover">
+            <span class="ow_photo_hover_info_item">
+                {capture name='url'}{url_for_route for="photo_user_album:[user=>$ownerName, album=>`$album->id`]"}{/capture}
+                <a href="{$smarty.capture.url}">{$album->name|truncate:60}</a>: 
+                {$photoIndex} {text key='photo+of'} {$photoCount}
+            </span>
+            </div>
+
+            {if $fullsizeUrl}
+            <div class="ow_photo_hover_info_r ow_right">
+                <a class="ow_photo_hover_zoom" href="{$fullsizeUrl}" target="_blank" title="{text key='photo+view_fullsize'}"></a>
+            </div>
+            {/if}
+        </div>
+        <div class="ow_photo_preload"></div>
+    </div>
+
+    {capture name='view_url'}{url_for_route for="view_photo:[id=>`$photo->id`]"}{/capture}
+    <div class="ow_photo_info clearfix">
+        <div class="ow_left ow_superwide ow_break_word">
+            {if $photo->description}<p id="photo-description" class="ow_smallmargin">{$photo->description}</p>{/if}
+            <p class="ow_small ow_remark ow_std_margin">{format_date timestamp=$photo->addDatetime}</p>
+            {add_content key='socialsharing.get_sharing_buttons' description=$photo->description url=$smarty.capture.view_url image=$url addMetaTags=false entityType='photo' entityId=$photo->id}
+            <div class="ow_break_word ow_photo_comments">{$comments}</div>
+        </div>
+
+        {add_content key='photo.photo_floatbox.content.between_description_and_wall'}
+
+        <div class="ow_right ow_supernarrow">
+            {block_decorator name='box' type='empty' capEnabled=false addClass='ow_break_word ow_stdmargin clearfix'}
+            {decorator name='avatar_item' data=$avatar}
+            <div class="ow_photo_info_name">
+                <a href="{$avatar.url}">{$avatar.title}</a>
+            </div>
+            {/block_decorator}
+            {block_decorator name='box' type='empty' capEnabled=false addClass='ow_break_word ow_stdmargin'}
+            {$rate}
+            {/block_decorator}
+
+            {block_decorator name='box' type='empty' capEnabled=false addClass='ow_break_word ow_stdmargin'}
+            {$tags}
+            {/block_decorator}
+        </div>
+    </div>
+    {/if}
+</div>

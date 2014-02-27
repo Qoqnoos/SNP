@@ -1,0 +1,7 @@
+{if $canAdd}
+<div class="ow_right">{decorator name='button' class='ow_ic_add' id='btn-add-new-photo' langLabel='photo+add_new'}</div>
+{/if}
+
+{$photoMenu}
+
+{component class='PHOTO_CMP_PhotoList' type=$listType count=5}

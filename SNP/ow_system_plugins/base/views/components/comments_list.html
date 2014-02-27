@@ -1,0 +1,52 @@
+{style}
+{literal}
+.ow_comments_list .ow_attachment{
+    padding-top:10px;
+}
+.ow_comments_list .comments_view_all{
+    text-align:right;
+    font-size:10px;
+    height:15px;
+}
+.ow_comments_item .cnx_action{
+    display:none;
+}
+{/literal}
+{/style}
+<div id="{$cmpContext}">
+   <div class="ow_comments_list ow_std_margin">
+   		{if isset($noComments)}
+   		<div class="ow_nocontent">{text key="base+comment_no_comments"}</div>
+   		{else}
+        {if !empty($viewAllLink)}<div class="comments_view_all"><a href="javascript://">{$viewAllLink}</a></div>{/if}
+      {foreach from=$comments item='comment'}
+      <div class="ow_comments_item ow_smallmargin clearfix">
+			<div class="cnx_action">{$comment.cnxAction}</div>
+			<div class="ow_comments_item_picture">
+                {decorator name='avatar_item' data=$comment.avatar}
+            </div>
+			<div class="ow_comments_item_info">
+				<span class="{if !empty($comment.cnxAction)}ow_comments_date_hover {/if}ow_comments_date ow_nowrap ow_tiny ow_remark">{$comment.date}</span>
+				<div class="ow_comments_item_header"><a href="{$comment.profileUrl}">{$comment.displayName}</a></div>
+				<span class="comment_arr"></span>
+				<div class="ow_comments_item_content">
+                    <div class="ow_comments_content ow_smallmargin">{$comment.content}</div>{$comment.content_add}
+                </div>
+			</div>
+		</div>
+      {/foreach}
+      {if !empty($pages)}
+         <div class="ow_paging clearfix ow_stdmargin">
+         	<span>{text key='base+pages_label'}</span>
+            {foreach from=$pages item='page'}
+            {if !isset($page.pageIndex)}
+            <span>{$page.label}</span>
+            {else}
+            <a href="javascript://" class="page-{$page.pageIndex}{if isset($page.active) && $page.active} active{/if}">{$page.label}</a>
+            {/if}
+            {/foreach}
+         </div>
+      {/if}
+      {/if}
+   </div>
+</div>

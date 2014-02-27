@@ -1,0 +1,12 @@
+<div class="clearfix">
+    {foreach from=$list item='image' name='i'}
+    <a href="{$image.url}" style="float: left; margin: 0px 4px 4px 0px;">
+        <img height="80" src="{$image.image}">
+    </a>
+    {/foreach}
+    {if !empty($vars.more) && $moreCount}
+    <span style="float: left; display: inline-block; padding-top: 65px" class="ow_remark">
+        <a href="{$vars.more.url}" class="photo_view_more"> {text key='photo+feed_more_items' moreCount=$moreCount}</a>
+    </span>
+    {/if}
+</div>

@@ -1,0 +1,14 @@
+newsfeed:auto
+mailbox:auto
+friends:auto
+notifications:auto
+slideshow:auto
+watchdog
+blogs
+groups
+links
+photo
+video
+forum
+event
+ajaxim

@@ -1,0 +1,19 @@
+<div id="photo_edit_form">
+{form name='photo-edit-form'}
+    <table class="ow_table_1 ow_form ow_stdmargin">
+        <tr class="ow_alt2 ow_tr_first">
+            <td class="ow_label">{label name='album'}</td>
+            <td class="ow_value">{input name='album'} {error name='album'}</td>
+        </tr>
+        <tr class="ow_alt1">
+            <td class="ow_label">{label name='description'}</td>
+            <td class="ow_value">{input name='description'} <br /> {error name='description'}</td>
+        </tr>
+        <tr class="ow_alt2 ow_tr_last">
+            <td class="ow_label">{label name='tags'} <br /><span class="ow_small">{text key='photo+tags_desc'}</span></td>
+            <td class="ow_value">{input name='tags'}</td>
+        </tr>
+    </table>
+	<div class="clearfix"><div class="ow_right">{submit name='edit' class='ow_ic_save ow_positive'}</div></div>
+{/form}
+</div>

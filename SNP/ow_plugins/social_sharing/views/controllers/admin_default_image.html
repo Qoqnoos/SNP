@@ -1,0 +1,27 @@
+{style}{literal}
+    .upload_container {
+        width: 400px;
+    }
+
+    .input_container{
+        height:40px;
+        display:table-cell;
+        vertical-aling:midle;
+    }
+
+    .padding_left{
+        padding-left:12px;
+    }
+{/literal}{/style}
+
+{$contentMenu}
+
+<div class="ow_automargin ow_wide">
+	{form name='default_image'}
+        <div class="ow_center ow_std_margin"><img src="{$imageUrl}"></div>
+        <div class="upload_container ow_automargin">
+            <div class="input_container">{input name='image'}<div>{error name='image'}</div></div>
+            <div class="input_container padding_left">{submit name='upload' class='ow_ic_save ow_positive'}</div>
+        </div>
+	{/form}
+</div>

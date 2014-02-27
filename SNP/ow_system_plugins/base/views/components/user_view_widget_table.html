@@ -1,0 +1,51 @@
+{if $ownerMode || ($adminMode && !$superAdminProfile)}
+    {style}
+        {literal}
+
+            .ow_edit_profile_link
+            {
+                position: absolute;
+                right: 0px;
+                top: 0px;
+            }
+        {/literal}
+    {/style}
+    {script}
+        {literal}
+            (function(){
+                $(".user_profile_data").hover(
+                  function(){
+                    $("#edit-profile").fadeIn();
+                  },
+                  function(){
+                    $("#edit-profile").fadeOut();
+                  }
+              );
+           }());
+       {/literal}
+    {/script}
+{/if}
+
+<div class="user_profile_data" style="position:relative">
+ {if $ownerMode || ($adminMode && !$superAdminProfile) }
+     <div style="display: none;" id="edit-profile" class="ow_edit_profile_link">
+            <a class="ow_lbutton" href="{$profileEditUrl}">{text key='base+edit_profile_link'}</a>
+     </div>
+ {/if}
+ <table class="ow_table_3 ow_nomargin">
+    {foreach  from=$questionArray key='section' item='questions'}
+        {if !empty($section) }<tr class="ow_tr_first"><th colspan="2" class="ow_section"><span>{text key="base+questions_section_`$section`_label"}</span></th></tr>{/if}
+        {foreach  from=$questions key='sort' item='question' name='question'}
+            {if isset( $questionData[$question.name] ) }
+                <tr class="{if $smarty.foreach.question.last}ow_tr_last{/if}">
+                    <td class="ow_label" style="width: 20%">{if empty($questionLabelList[$question.name])}{text key="base+questions_question_`$question.name`_label"}{else}{$questionLabelList[$question.name]}{/if}</td>
+                    <td class="ow_value"><span class="{if !empty($question.hidden)}ow_field_eye ow_remark profile_hidden_field{/if}">{$questionData[$question.name]}</span></td>
+                </tr>
+            {/if}
+        {/foreach}
+    {/foreach}
+ </table>
+ 
+ </div>
+
+{add_content key='socialsharing.get_sharing_buttons' title=$displayName image=$avatarUrl entityType='user' entityId=$userId }

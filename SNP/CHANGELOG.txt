@@ -1,0 +1,374 @@
+Oxwall 1.6.0, 2014-01-08:
+====================================
+
+Platform:
+- added mobile version platform, supporting following features: 
+    - navigation
+    - system pages (splash screen, site maintenance, user not reviewed, passworded site access, etc.)
+    - user profile (sign-in, view, list)
+    - photos (upload, view)
+    - newsfeed (base, photos)
+    - real time activity notifications (base, comments, friends, groups, events)
+    - moderation options (profile deletion, suspension)
+    - mobile theme customization
+    - facebook connect
+    - reset password
+    - RTL support
+    - auto-login for returning visitors
+- updated jquery library to version 2.0.3
+- added PHP 5 support
+- added theme autoupdate support
+- fixed issue with sent letters not being deleted from the database during cron execution
+- added site user status recognition (not approved, suspended, etc.) when they are displayed in site listings
+- removed duplicated indexes in core database
+- fixed issue with non-recognition of changes made to the profile questions on the join form
+- removed duplicate meta tags, and added new meta tags to plugin and core pages
+- added proper support of remote user IP when the software operates via Nginx and/or Cloudflare
+- removed option "Column count" for profile questions, which lack multiple choice values
+- fixed regexp validation for form fields like email
+- fixed issue with profile registration when the site features several account types and is closed for password access
+- made join form to check username for uniqueness when site access is closed for not logged-in users
+- fixed issue with inability to add new menu items in the main section when it is empty
+- fixed issue with failure to display video thumbnails for YouTube videos uploaded through media panel
+- added check for removal of install folder after successful software installation (for security reasons)
+- fixed issue with failure to add lang key, when default language is not active
+- added check for module name when adding new plugin through admin area
+- introduced ajax for button actions on profile view: suspend, make featured/remove from featured, block/unblock
+- removed option to deactivate default language if no other languages are present on site
+- fixed paging on page with user list
+- fixed issue with failure to send users mail notifying them of profile approval, when approval is done from view profile page
+
+Themes:
+- new theme ‘Munchen’
+
+Social Sharing:
+- added new plugin to allow users share site content on popular social networks
+
+Newsfeed:
+- defined output formats
+- fixed issue allowing one user to delete another user’s comment after liking it in newsfeed 
+- fixed issue allowing blocked user to leave comments on the profile which initiated the block
+- fixed issue with displaying thumbnails for YouTube videos
+- added support for non-standard ports
+- fixed issue with inability to delete added video in status update
+
+Forum:
+- added option to search topic by username
+- made forum index display forum topic list if forum contains only one section with a single sub-forum
+- added separate page for forum section
+
+Blogs:
+- fixed posts sorting in archive and during tag search
+- fixed fatal error on page displaying all posts of a specific user
+- fixed issue allowing any user to edit any post by accessing it through direct URL
+- fixed issue with displaying big photos in posts
+
+Events:
+- added lang keys for accept and ignore buttons
+- fixed issue with failure to delete newsfeed entries for events removed from site
+- fixed typos in code
+- fixed issue with javascript processing non-latin symbols
+
+Groups:
+- fixed issue allowing any user to join private groups through direct URL 
+- fixed issue with javascript processing non-latin symbols
+- fixed issue with failure to unsubscribe users from group newsfeed updates after leaving the group
+
+Photos:
+- added special hash to photo file names for improved security. (Fix is applied only to new photos).
+
+Videos:
+- added video thumbnail caching for improved site performance
+
+
+Oxwall 1.5.3, 2013-04-16:
+==============================
+
+Platform:
+- fixed the cron job notification in admin area even a cron command is setup right
+
+
+Oxwall 1.5.2, 2013-04-08:
+==============================
+
+Platform:
+- run the cron job on page refresh
+- redesigned tag input
+- Direct view permissions management for index/dashboard/my profile widgets.
+- fixed minor issues with the default Origin theme
+- fixed glitch with single choice/drop down profile questions
+- installation script now overwrites config.php if permissions are allowed
+- fixed markup issue on Privacy&Permissions page in admin area
+- fixed markup issue on Pages&Menus page when too many menu items are added to the main menu area
+- rss widget: links now open in new window
+- added default delimiters in toolbar for IPC decorator
+- redesigned "Choose theme" page in admin area
+- fixed an ability to remove account type if any profile questions are assigned to it
+- fixed a glitch with too long titles for widgets on site index/dashboard/profile view pages
+
+Themes:
+- new ShowCase
+
+Activity Notifications:
+- added an option for users to receive notifications immediately
+- added notification when someone posts a status on user's profile page
+
+Import contacts:
+- added invitation by email
+- fixed facebook invitation page
+- added HTTPS support for facebook import configuration ( Secure Canvas URL)
+
+Mailbox:
+- fixed markup issues
+
+Blogs:
+- add My Drafts button
+
+Cloudflare:
+- added new plugin to support CloudFlare service
+
+Photos:
+- added "Upload photos" button on "view photo album" page
+- redesigned comment box
+- redesigned "Add photo" page
+
+Events:
+- redesigned attendance buttons
+
+Newsfeed:
+- fixed a link to profile in birthdate entry
+
+Forum:
+- changed the way attachments are named
+
+
+Oxwall 1.5.0, 2012-12-19:
+==============================
+
+Platform:
+- New real-time notification system
+- Redesigned user console
+- The new default theme: Origin
+- Added ability for moderators to modify users' profile info and view hidden fields
+- Improved widget panels performance
+- Profile view buttons now handled with ajax
+- RSS atom support for RSS widgets
+- Template files can no longer use PHP inside smarty code
+- Optimized user lists management in the admin panel
+- Some friend-only content is now properly shown to friends
+- Cloud files mime type processing
+- Photo upload requirement on the registration form can now be removed
+- The ability to flag user's own content
+- Display paging navigation when browsing content by tags
+- Proper headers for "404 not found" page
+- Double slashes issue in custom page URL
+- Profile questions labels
+- URLs for flagged photos in the moderation panel
+- "Follow" button now properly changes to "unfollow" after page reload
+- Resolved multiple issues with language management in the admin panel
+- User roles order in role management interface now defines avatar badge display
+- URL validation for custom pages
+- Fixed security issue into widget panel
+- Fixed issue with admin’s ability of deleting himself via Newsfeed comments;
+- Removed button allowing admin delete his profile via profile page;
+- Fixed issue with not working context actions after comment deletion;
+
+Watchdog:
+- The new antispam plugin
+
+Video:
+- Thumbnails for Vimeo, xhamster.com now get cropped again
+- Rate system improved by also counting the number of votes
+- Performance optimization
+
+Instant Chat:
+- Completely redesigned
+- time of the last messages is now correct
+- Fixed displaying the number of online users above 14
+- Fixed fake bruteforce alert when a few chat windows are opened
+- Added a preloader that disappears once online users list is loaded;
+- Performance optimization
+
+Blogs:
+- New interface for draft posts view
+- Fixed after-draft post date
+- Rate system improved by also counting the number of votes
+- Fixed sort order for updated posts
+- Fixed drag'n'drop error in IE8
+
+Photos:
+- Fixed unclickable "Add new" link in the photo widget
+- Fixed the permission bug for private photos
+- Rate system improved by also counting the number of votes
+- Removed comment option for the list of photos in the newsfeed
+- Updated Flash Photo Uploader;
+- Performance optimization
+
+Forum:
+- At topic creation, "subscribe to this topic" option now checked by default
+
+Groups:
+- Ability to remove members from group
+- Permission check for group view on the group list and the groups widget
+
+Newsfeed:
+- Performance improvement: old unused items removal + content caching
+- Added an ability of ‘liking’ your own Newsfeed items;
+
+Events:
+- Permission check for event view in the events widget
+- Suspended users no longer displayed on the participants' list
+
+Facebook Connect:
+- Facebook Connect Synchronization improvements and minor fixes
+
+
+Oxwall 1.4.1, 2012-10-09:
+============================
+Platform:
+ - user role management security fix;
+ - prevention of possible XSS attacks in profile questions;
+
+Oxwall 1.4, 2012-06-21:
+============================
+
+Platform:
+- new dashboard widget "Quick links", instead of separate plugin widgets;
+- comments: ability to choose preview images for posted URLs;
+- new design element, Context Action: currently on photo view only.
+- moderators now can see private content for moderation;
+- form buttons location redesign;
+- various language strings fixed;
+- flagging now works without page reload;
+- fixed online user display in case of "me only" mode;
+- widget panel was optimized for better performance;
+- floatbox refactored;
+
+Photos:
+- redesigned photo browsing;
+- private photos: fixed display in top rated list;
+- fixed bug when photos are uploaded under HTTPS;
+
+Import Contacts:
+- Google contact import is back and improved;
+
+Forum:
+- forum: added search results order by date and relevance;
+- fixed an error with too long topic text;
+
+Birthdate:
+- birthdate fields (date/month/day) can be translated via Language section;
+
+Video:
+- video: long titles and descriptions are now truncated;
+
+Newsfeed:
+- profile newsfeed: new ability for others to post;
+- main site newsfeed enhanced;
+
+Groups:
+- group list: fixed double paging;
+
+
+Oxwall 1.3.2, 2012-03-21:
+==============================
+
+Platform:
+- Cron setup changed (now uses HTTP);
+- Default user role is now impossible to remove;
+- Fixed the bug with the number of pics for WYSIWYG gallery;
+- Notifications "Someone posts a wall comment in a group I participate in",     "Someone invites me to a group", etc., enabled by default;
+- Additional admin now can't delete the super admin profile;
+- XSS vulnerability in the update script fixed;
+- Added file_get_contents check on server;
+- While editing a custom page it's no longer possible to enter existing pages' URLs.
+- Added rel="nofollow" for auto-linking and WYSIWYG;
+- Changed buttons for group actions on profile lists in admin area;
+- Removed Exception message that happened while approving an already approved member;
+- Changed the order of displaying CSS graphics in the admin area;
+- Multiple language entries corrected.
+
+Blogs:
+- Post tags are now added to meta keywords;
+- Added messages about successful post creation and editing;
+
+Friends:
+- Fixed friend request template;
+- With friend request a user automatically follows another user;
+
+Instant Chat:
+- Fixed 'OW Debug' error message when admins deactivated 'Friends' plugin;
+- Fixed 'last activity 42 years ago' bug;
+- Removed switching ‘for all’ and ‘friends only’ modes, making it dependent on the 'Friends' plugin;
+
+Links:
+- 'More' button does not stick to the last letter any more;
+- Links now open in the new window;
+
+Forum:
+- 'Ghost' topics now removed in five days after the original topic move;
+- User no longer redirected to a new forum section after moving a topic;
+- Fixed 'Latest Reply' field when author profile deleted;
+
+Video:
+- Fixed Flash object overlap;
+
+Advertisement:
+- Now more than 14 banners can be added to one ad place;
+- Added the 'Hide Ads' authorization action for user roles;
+
+Events:
+- New events are now at the top of the list;
+- Long event locations now stay within widget;
+- If 'Friends' plugin deactivated you can invite all site users (who were not invited yet and are not registered for event);
+- Invite interface now shows all site users (up to 100) if 'Friends' plugin is inactive;
+- Added 'Accept/Decline' buttons to event invitations;
+- Event notification now disappears after visiting event page;
+
+Mailbox:
+- Fixed avatar while sending private messages from profile;
+
+Privacy:
+- If 'Friends' plugin deactivated all ‘Friends Only’ settings change to ‘Only Me’;
+
+Groups:
+- If 'Friends' plugin deactivated you can now invite all site users (up to 100);
+- Group listings changed;
+- Invite notifications now disappear after visiting invitation list or group pages;
+
+Newsfeed:
+- Redesigned group activity display;
+- Individual pages for every newsfeed item;
+- New option to choose preview picture for attached URLs;
+
+Birthdays:
+- E-mail notifications about new comments or likes for birthday items;
+
+
+Oxwall 1.3.0, 2012-02-07:
+=========================
+
+Platform
+- Added Smarty 3 support;
+- Redesigned Developer Tools widget;
+- Disabled WYSIWYG for mobile devices;
+- Fixed XSS in file comment's attachments;
+- Added group action to "Unverify Email" for user lists in admin panel;
+- Added support of synchronization between different products of the same payment system;
+- Added selection of user roles for mass mailing;
+- Fixed: welcome letter is sent only after email address verification;
+- Fixed scrolling in floatbox;
+- Truncated Javascript in widget titles;
+- Added "Block User" feature;
+
+Plugins
+- Forum: added warning message if not all attachments were uploaded;
+- Forum: added "Private Forum" option;
+- Forum: fixed access to group's forum;
+- Events: changed presentation of "Start Date" and "End Date" fields;
+- Events: fixed private events displayed on public listings;
+- Newsfeed: fixed interaction with private items such as groups, private events;
+- Private groups: new plugin;
+- Import Contacts: new plugin;
+- Blogs: truncated blog's description in widgets;
+- Links: truncated links's description in widgets;

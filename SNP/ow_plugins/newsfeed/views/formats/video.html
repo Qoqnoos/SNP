@@ -1,0 +1,25 @@
+{style}
+{literal}
+.ow_newsfeed_video_embed embed, .ow_newsfeed_video_embed object, .ow_newsfeed_video_embed iframe {
+    height: 220px;
+    width: 300px;
+}
+{/literal}
+{/style}
+
+{if !empty($vars.status)}<div class="ow_newsfeed_body_status">{$vars.status}</div>{/if}
+{if !empty($vars.image)}
+<div class="clearfix ow_newsfeed_large_image">
+    <div class="ow_newsfeed_item_picture">
+        <a href="{if !empty($vars.url)}{$vars.url}{else}javascript://{/if}"><img src="{$vars.image}" /></a>
+    </div>
+    <div class="ow_newsfeed_item_content">
+        <a class="ow_newsfeed_item_title" href="{if !empty($vars.url)}{$vars.url}{else}javascript://{/if}">{$vars.title}</a>
+        <div class="ow_remark ow_smallmargin">{$vars.description}</div>
+        <div class="ow_newsfeed_action_activity event_newsfeed_activity">[ph:activity]</div>
+    </div>
+</div>
+{elseif !empty($vars.embed)}
+    <div class="ow_newsfeed_video_embed">{$vars.embed}</div>
+    <div class="ow_newsfeed_action_activity event_newsfeed_activity">[ph:activity]</div>
+{/if}

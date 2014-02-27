@@ -1,0 +1,33 @@
+<div class="ow_links clearfix">
+
+	<div class="ow_superwide ow_left">
+		{block_decorator name="box" type="empty" toolbar=$tb addClass="ow_stdmargin"}
+            <p><a href="{$info.dto->url}" target="_blank" >{$info.link}</a></p>
+			<p>{$info.dto->description}</p>
+		{/block_decorator}
+        {* add_content key='socialsharing.get_sharing_buttons' *}
+        {add_content key='links.link_view.content.after_link_description'}
+        <span id="comments"></span>
+		{$comments}
+
+	</div>
+
+	<div class="ow_supernarrow ow_right">
+		{block_decorator name="box" addClass="ow_stdmargin" langLabel="links+link"}
+			<table class="ow_table_3 ow_small ow_nomargin">
+				<tr class="ow_tr_first">
+					<td class="ow_label">{text key="links+by"}</td>
+					<td>
+						{user_link name=$userInfo.displayName username=$userInfo.userName}
+					</td>
+				</tr>
+               	<tr class="ow_tr_last">
+					<td class="ow_label">{text key="links+added"}</td>
+					<td>{format_date timestamp=$info.dto->timestamp}</td>
+				</tr>
+            </table>
+          {/block_decorator}
+
+	{$tagCloud}
+	</div>
+</div>
